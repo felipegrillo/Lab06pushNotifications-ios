@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF2712F21A8C054F001D838A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2712F11A8C054F001D838A /* MobileCoreServices.framework */; };
+		FF2712F41A8C0578001D838A /* Pushwoosh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF2712F31A8C0578001D838A /* Pushwoosh.framework */; };
 		FFA9E0CE1A8BE8CD00352AFA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA9E0CD1A8BE8CD00352AFA /* main.m */; };
 		FFA9E0D11A8BE8CD00352AFA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA9E0D01A8BE8CD00352AFA /* AppDelegate.m */; };
 		FFA9E0D41A8BE8CD00352AFA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFA9E0D31A8BE8CD00352AFA /* ViewController.m */; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF2712F11A8C054F001D838A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FF2712F31A8C0578001D838A /* Pushwoosh.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Pushwoosh.framework; path = "../../../Downloads/pushwoosh-ios-sdk-master/Framework/Pushwoosh.framework"; sourceTree = "<group>"; };
 		FFA9E0C81A8BE8CD00352AFA /* PushFelipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushFelipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFA9E0CC1A8BE8CD00352AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFA9E0CD1A8BE8CD00352AFA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2712F41A8C0578001D838A /* Pushwoosh.framework in Frameworks */,
+				FF2712F21A8C054F001D838A /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +69,8 @@
 		FFA9E0BF1A8BE8CD00352AFA = {
 			isa = PBXGroup;
 			children = (
+				FF2712F31A8C0578001D838A /* Pushwoosh.framework */,
+				FF2712F11A8C054F001D838A /* MobileCoreServices.framework */,
 				FFA9E0CA1A8BE8CD00352AFA /* PushFelipe */,
 				FFA9E0E41A8BE8CD00352AFA /* PushFelipeTests */,
 				FFA9E0C91A8BE8CD00352AFA /* Products */,
@@ -168,6 +176,7 @@
 				TargetAttributes = {
 					FFA9E0C71A8BE8CD00352AFA = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = QXF33N93KH;
 					};
 					FFA9E0E01A8BE8CD00352AFA = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -343,9 +352,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ieepo/Downloads/pushwoosh-ios-sdk-master/Framework",
+				);
 				INFOPLIST_FILE = PushFelipe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8ffe1652-ef0a-4bef-9471-7660d9faef7c";
 			};
 			name = Debug;
 		};
@@ -353,9 +369,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ieepo/Downloads/pushwoosh-ios-sdk-master/Framework",
+				);
 				INFOPLIST_FILE = PushFelipe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "8ffe1652-ef0a-4bef-9471-7660d9faef7c";
 			};
 			name = Release;
 		};
@@ -412,6 +435,7 @@
 				FFA9E0ED1A8BE8CD00352AFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFA9E0EE1A8BE8CD00352AFA /* Build configuration list for PBXNativeTarget "PushFelipeTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +444,7 @@
 				FFA9E0F01A8BE8CD00352AFA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
